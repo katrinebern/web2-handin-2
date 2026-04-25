@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #dce7f2;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #1d3557;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.country-list,
+.country-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.country-card {
+  min-height: 120px;
+  padding: 18px;
+  border: 1px solid #c9d6e2;
+  border-radius: 10px;
+  background-color: #dce7f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.country-card:hover {
+  background-color: #cbddeb;
+}
+
+.country-card h3 {
+  margin: 5px 0 0 0;
+  font-size: 24px;
+}
+
+.country-region {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #456;
+}
+
+.flag-small {
+  width: 80px;
+  max-height: 55px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.flag-large {
+  width: 140px;
+  max-height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.country-details a {
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+  background-color: #1d3557;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.country-details a:hover {
+  background-color: #27496d;
+}
+
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .country-grid {
+    grid-template-columns: 1fr;
+  }
+}
