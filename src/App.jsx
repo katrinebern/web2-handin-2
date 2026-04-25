@@ -7,8 +7,8 @@ function App() {
         <h1>Country Facts</h1>
 
         <nav>
-          <Link to="/about">About</Link>
           <Link to="/">Countries</Link>
+          <Link to="/about">About</Link>
         </nav>
       </header>
 
