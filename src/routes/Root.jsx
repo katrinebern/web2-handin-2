@@ -1,8 +1,9 @@
+import "../index.css";
 import { Link, Outlet } from "react-router-dom";
 
-function App() {
+export default function Root() {
   return (
-    <div className="app">
+    <div className="root">
       <header>
         <h1>Country Facts</h1>
 
@@ -18,5 +19,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

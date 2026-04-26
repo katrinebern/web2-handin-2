@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import CountryList from "../components/CountryList.jsx";
 import CountryDetails from "../components/CountryDetails.jsx";
 
-function CountriesPage() {
+function Countries() {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const countriesPerPage = 10;
+  const countriesPerPage = 9;
   const startIndex = page * countriesPerPage;
   const endIndex = startIndex + countriesPerPage;
   const visibleCountries = countries.slice(startIndex, endIndex);
@@ -27,7 +27,7 @@ function CountriesPage() {
         return response.json();
       })
       .then((data) => {
-        const sortedCountries = data.sort((a, b) =>
+        const sortedCountries = [...data].sort((a, b) =>
           a.name.common.localeCompare(b.name.common),
         );
 
@@ -94,4 +94,4 @@ function CountriesPage() {
   );
 }
 
-export default CountriesPage;
+export default Countries;
